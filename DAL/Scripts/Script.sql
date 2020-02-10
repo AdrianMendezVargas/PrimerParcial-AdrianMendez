@@ -8,6 +8,6 @@ create table Articulos(
 	Descripcion varchar(30),
 	Existencia int,
 	Costo decimal,
-	ValorNumerico int
+	ValorInventario decimal
 
 );

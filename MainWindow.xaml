@@ -8,5 +8,12 @@
         Title="MainWindow" Height="450" Width="400">
     <Grid>
 
+        <Menu>
+            <MenuItem Header="_Registro">
+                <MenuItem x:Name="RegitroArticuloMenuItem" Header="_Articulo" Click="RegitroArticuloMenuItem_Click"/>
+            </MenuItem>
+            
+        </Menu>
+
     </Grid>
 </Window>

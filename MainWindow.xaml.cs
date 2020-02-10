@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimerParcial_AdrianMendez.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,12 @@ namespace PrimerParcial_AdrianMendez {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void RegitroArticuloMenuItem_Click(object sender , RoutedEventArgs e) {
+            RegistroArticulo registroArticulo = new RegistroArticulo();
+            registroArticulo.Owner = this;
+            registroArticulo.ShowDialog();
         }
     }
 }

@@ -74,5 +74,27 @@ namespace PrimerParcial_AdrianMendez.BLL {
 
         }
 
+        public static bool Modificar(Articulo articulo) {
+
+            bool modificado = false;
+            Contexto db = new Contexto();
+
+            try {
+
+                db.Entry(articulo).State = EntityState.Modified;
+                modificado = (db.SaveChanges() > 0);
+
+            } catch (Exception) {
+
+                throw;
+
+            } finally {
+
+                db.Dispose();
+            }
+
+            return modificado;
+        }
+
     }
 }
