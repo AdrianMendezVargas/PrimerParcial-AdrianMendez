@@ -3,6 +3,8 @@ using PrimerParcial_AdrianMendez.DAL;
 using PrimerParcial_AdrianMendez.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace PrimerParcial_AdrianMendez.BLL {
@@ -94,6 +96,27 @@ namespace PrimerParcial_AdrianMendez.BLL {
             }
 
             return modificado;
+        }
+
+        public static List<Articulo> GetList(Expression<Func<Articulo , bool>> Expression) {
+
+            List<Articulo> articulosList = new List<Articulo>();
+            Contexto db = new Contexto();
+
+            try {
+
+                articulosList = db.Articulos.Where(Expression).ToList();
+
+            } catch (Exception) {
+
+                throw;
+
+            } finally {
+
+                db.Dispose();
+            }
+
+            return articulosList;
         }
 
     }

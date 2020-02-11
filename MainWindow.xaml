@@ -12,6 +12,9 @@
             <MenuItem Header="_Registro">
                 <MenuItem x:Name="RegitroArticuloMenuItem" Header="_Articulo" Click="RegitroArticuloMenuItem_Click"/>
             </MenuItem>
+            <MenuItem Header="_Consulta">
+                <MenuItem x:Name="ConsultaArticulosMenuItem" Header="_Articulo" Click="ConsultaArticulosMenuItem_Click"/>
+            </MenuItem>
             
         </Menu>
 

@@ -1,4 +1,5 @@
-﻿using PrimerParcial_AdrianMendez.UI.Registro;
+﻿using PrimerParcial_AdrianMendez.UI.Consulta;
+using PrimerParcial_AdrianMendez.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,12 @@ namespace PrimerParcial_AdrianMendez {
             RegistroArticulo registroArticulo = new RegistroArticulo();
             registroArticulo.Owner = this;
             registroArticulo.ShowDialog();
+        }
+
+        private void ConsultaArticulosMenuItem_Click(object sender , RoutedEventArgs e) {
+            ConsultaArticulos consultaArticulos = new ConsultaArticulos();
+            consultaArticulos.Owner = this;
+            consultaArticulos.ShowDialog();
         }
     }
 }
